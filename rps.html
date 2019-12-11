@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Loops</title>
+  </head>
+  <body>
+    
+    <h1>LETS GAMBLE!</h1>
+
+    <script type="text/javascript">
+      // Rock paper scissors
+
+      var choices = ['rock', 'paper', 'scissors']
+      var userscore = 0
+      var pcscore = 0
+
+      for (var round = 0; round < 10; round++) {
+        
+        console.log('round ', round)
+        var userChoice = prompt('rock, paper or scissors?').toLowerCase()
+        var pcChoice = Math.floor(Math.random() * 3)
+        var pcChoiceText = choices[pcChoice]
+
+        console.log(userChoice, pcChoice, pcChoiceText)
+
+        if (userChoice === 'rock') {
+          console.log('user chose rock')
+          if (pcChoiceText === 'rock') {
+            console.log('pc choice rock')
+            console.log('It was a tie!')
+          }
+
+          if (pcChoiceText === 'paper') {
+            console.log('pc choice paper')
+            pcscore++;
+          }
+
+          if (pcChoiceText === 'scissors') {
+            console.log('pc choice scissors')
+            userscore++;
+          }
+        }
+
+        if (userChoice === 'paper') {
+          console.log('user chose paper')
+          if (pcChoiceText === 'rock') {
+            console.log('pc choice rock')
+            userscore++;
+          }
+
+          if (pcChoiceText === 'paper') {
+            console.log('pc choice paper')
+            console.log('It was a tie!')
+          }
+
+          if (pcChoiceText === 'scissors') {
+            console.log('pc choice scissors')
+            pcscore++
+          }
+        }
+
+        if (userChoice === 'scissors') {
+          console.log('user chose scissors')
+          if (pcChoiceText === 'rock') {
+            console.log('pc choice rock')
+            pcscore++;
+          }
+
+          if (pcChoiceText === 'paper') {
+            console.log('pc choice paper')
+            userscore++;
+          }
+
+          if (pcChoiceText === 'scissors') {
+            console.log('pc choice scissors')
+            console.log('It was a tie!')
+          }
+        }
+      }
+
+      console.log('RESULTS: usersccore:', userscore, 'pcscore', pcscore)
+      // print who won
+
+    </script>
+    
+  </body>
+</html>
