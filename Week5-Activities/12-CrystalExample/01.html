@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>simple crystal game</title>
+</head>
+<body>
+  <h1>Number to Guess: <span id="number-to-guess"></span></h1>
+
+  <img class="crystal-image" src="http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg" alt="crystals" style="width: 150px; height: 150px;">
+
+
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+
+  // Created a simple "alert" to get our bearings.
+
+  var targetNumber = 53;
+
+  // fill h1
+  $("number-to-guess").text(targetNumber);
+
+// current score
+  var counter = 0;
+
+  var numberOptions = [10, 5, 3, 7];
+
+// creating image element
+for (i = 0; i < numberOptions.length; i++) {
+  var imageCrystal = $("<img>");
+  imageCrystal.addClass("crystal-image");
+  imageCrystal.attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
+  imageCrystal.attr("data-crystalvalue", numberOptions[i])
+  imageCrystal.text(numberOption[i])
+  $("#crystals").append(imageCrystal)
+
+}
+</script>
+</body>
+</html>
